@@ -1,0 +1,14 @@
+﻿BEGINNING-OF-PROGRAM
+	BEGINNING-OF-EXECUTION
+DEFINE-NEW-INSTRUCTION move AS
+
+		turnleft;
+		move;
+		turnleft;
+		move;
+		move; move;
+		move;
+		pickbeeper;
+		turnoff
+	END-OF-EXECUTION
+END-OF-PROGRAM
