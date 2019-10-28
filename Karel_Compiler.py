@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 26 16:52:26 2019
-
-@author: ACER
-"""
 import re
 
 #Tener un input que nos reciba el nombre del archivo
