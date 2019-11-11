@@ -43,6 +43,7 @@ contador_iterate=0
 indice = 0
 indice_nueva = []
 
+
 for line in text:
     lista_palabras = re.compile(r"\b[a-zA-Z-]+").findall(line)
     palabras.append(lista_palabras)
@@ -62,7 +63,7 @@ for line in text:
 
         
     indice +=1
- #Se guardan los indices en los cuales estan definidas las nuevas instrucciones
+#Se guardan los indices en los cuales estan definidas las nuevas instrucciones
 indice_palabra_final = len(palabras)-1
 
 #Se agregan las nuevas instrucciones a los tokens
@@ -73,6 +74,7 @@ for instruccion in indice_nueva:
         myError = NameError("{0} ya esta definida".format(palabras[instruccion][1]))
         raise myError
     
+ 
 #Recorrer todas las palabras y verificar si es una palabra conocida o no (sin ;)
 #Numero de linea sera el indice del elemento mas 1
 for lista_palabras in palabras:
@@ -101,6 +103,7 @@ if palabras_con_PuntoYComa[0][0] != "BEGINNING-OF-PROGRAM":
 value = False # Esta Variable me permite saber si existe BEGINNING-OF-EXECUTION
 valor_condicional = False #Esta Variable me permite saber si existen condicionales
 contador_end = 0
+
 for token in palabras_con_PuntoYComa:
     for string in token:
         if string == "BEGINNING-OF-EXECUTION":
