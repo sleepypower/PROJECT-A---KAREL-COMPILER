@@ -35,7 +35,7 @@ palabras = [] #Sin (;)
 palabras_con_PuntoYComa = []
 
 
-#Contador de ocurrencias del patron DEFINE...
+#Contador de ocurrencias de estructuras...
 contador_de_nuevas_instrucciones = 0
 contador_if = 0
 contador_while=0
