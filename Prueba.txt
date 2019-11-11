@@ -1,22 +1,24 @@
 ﻿BEGINNING-OF-PROGRAM
-		AS turnright DEFINE-NEW-INSTRUCTION 
-		BEGIN
-			ITERATE 3 TIMES
-			BEGINN
-			turnleft
-			END
-		END;
-		DEFINE-NEW-INSTRUCTION   pick-all-beepers AS
-		BEGIN
-			WHILE front-is-clear   DO
-			BEGIN
-			move;
-			pickbeeper
-			END
-		END;	
-BEGINNING-OF-EXECUTION
-turnright ;
-pick-all-beepers;
-turnoff
-END-OF-EXECUTION
+DEFINE-NEW-INSTRUCTION turnright AS
+BEGIN
+turnleft;
+turnleft;
+IF front-is-clear THEN
+BEGIN
+turnleft
+END
+END;
+	BEGINNING-OF-EXECUTION
+		turnleft;
+		move;
+IF left-is-clear THEN
+BEGIN
+		turnleft
+END;	
+	move;
+		move;
+		move;
+		pickbeeper;
+		turnoff
+	END-OF-EXECUTION
 END-OF-PROGRAM
